@@ -1,1 +1,155 @@
-# -
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adham Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#4f46e5;
+      --text:#f8fafc;
+      --muted:#cbd5e1;
+      --dark:#0b1220;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:"Poppins",sans-serif;background:#0b0f1a;color:#111}
+    a{color:inherit;text-decoration:none}
+
+    /* ====== NAVBAR ====== */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:transparent}
+    .brand{display:flex;align-items:center;gap:10px;color:var(--text)}
+    .brand .logo{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 30% 30%, #60a5fa, #4f46e5);box-shadow:0 0 0 3px rgba(255,255,255,.1)}
+    .brand strong{font-weight:700;letter-spacing:.5px}
+    .menu{display:flex;gap:22px}
+    .menu a{color:var(--muted);font-size:14px}
+    .menu a:hover{color:#fff}
+
+    /* ====== HERO ====== */
+    .hero{position:relative;min-height:86vh;display:grid;place-items:center;text-align:center;color:var(--text);padding:0 16px}
+    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(10,15,25,.55),rgba(10,15,25,.65)),url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop');background-size:cover;background-position:center;z-index:-2}
+    .hero .card{max-width:900px;background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);border-radius:22px;padding:40px}
+
+    .eyebrow{font-size:13px;letter-spacing:.35em;color:#cbd5e1;margin-bottom:10px}
+    h1{font-size:44px;line-height:1.1;font-weight:700;margin-bottom:12px;color:#fff}
+    .lead{max-width:720px;margin:0 auto 22px;color:#e2e8f0}
+    .cta{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:var(--primary);color:#fff;font-weight:600;transition:.25s}
+    .cta:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(79,70,229,.35)}
+    .cta .play{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#111;font-weight:900}
+
+    /* ====== SECTIONS ====== */
+    section{padding:80px 20px}
+    .container{max-width:1060px;margin:0 auto}
+    .section-title{font-size:28px;font-weight:700;margin-bottom:14px;color:#0f172a}
+    .muted{color:#475569}
+    .about-grid,.projects-grid{display:grid;grid-template-columns:1fr;gap:24px}
+    .card{background:#ffffff;border-radius:18px;box-shadow:0 20px 60px rgba(2,6,23,.08);padding:26px}
+    .pill{display:inline-block;font-size:12px;padding:6px 12px;border-radius:999px;background:#eef2ff;color:#3730a3;margin-bottom:10px}
+    .project-img{width:100%;border-radius:12px;margin-bottom:12px}
+    @media (min-width:768px){
+      h1{font-size:58px}
+      .about-grid{grid-template-columns:1fr 1fr}
+      .projects-grid{grid-template-columns:repeat(3,1fr)}
+      .nav{padding:18px 40px}
+    }
+    .socials a{margin:0 10px;color:#1e293b;font-weight:600}
+    .socials a:hover{color:var(--primary)}
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="brand">
+      <div class="logo"></div>
+      <strong>Adham</strong>
+    </div>
+    <nav class="menu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main id="home" class="hero">
+    <div class="card">
+      <div class="eyebrow">CREATIVE ART</div>
+      <h1>Developer & Designer</h1>
+      <p class="lead">Clean layouts, smooth interactions, and modern visuals. Scroll to learn more about me.</p>
+      <a class="cta" href="#about">
+        <span class="play">›</span>
+        <span>Show Bio</span>
+      </a>
+    </div>
+  </main>
+
+  <!-- ABOUT / BIO -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="card">
+        <div class="pill">السيرة الذاتية (AR)</div>
+        <h2 class="section-title">نبذة عني</h2>
+        <p class="muted">
+          عمري 18 سنة ومهتم بالبرمجة والتصميم. أحب بناء مواقع نظيفة وسريعة ومتوافقة مع الهاتف، وتصميم واجهات مستخدم مريحة وبسيطة. أتعلم حالياً أساسيات تطوير الواجهة الأمامية مثل HTML و CSS و JavaScript، وأستخدم أدوات التصميم مثل Figma و Photoshop. هدفي هو تطوير مهاراتي خطوة بخطوة وبناء مشاريع عملية تُظهر شغفي وقدرتي على التعلم.
+        </p>
+      </div>
+      <div class="card" dir="ltr" lang="en">
+        <div class="pill">Bio (EN)</div>
+        <h2 class="section-title">About Me</h2>
+        <p class="muted">
+          I'm an 18‑year‑old student passionate about programming and design. I enjoy building clean, fast, mobile‑friendly websites and simple, comfortable user interfaces. I'm learning front‑end basics (HTML, CSS, JavaScript) and using design tools like Figma and Photoshop. My goal is to keep improving through real projects that showcase my curiosity and ability to learn.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="pill">أعمالي</div>
+      <h2 class="section-title">My Projects</h2>
+      <div class="projects-grid">
+        <div class="card">
+          <img class="project-img" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800" alt="Website Project 1" />
+          <h3>Website Project 1</h3>
+          <p class="muted">تصميم واجهة لموقع شركة تقنية ناشئة.</p>
+        </div>
+        <div class="card">
+          <img class="project-img" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800" alt="Website Project 2" />
+          <h3>Website Project 2</h3>
+          <p class="muted">موقع شخصي (Portfolio) باستخدام HTML و CSS.</p>
+        </div>
+        <div class="card">
+          <img class="project-img" src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=800" alt="Website Project 3" />
+          <h3>Website Project 3</h3>
+          <p class="muted">لوحة تحكم Dashboard بسيطة مع تصميم تفاعلي.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="card">
+        <h2 class="section-title">Contact</h2>
+        <p class="muted">يمكنك التواصل معي عبر الروابط التالية:</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/adh._.am1/" target="_blank">Instagram</a>
+          <a href="mailto:adhmamr766@gmail.com" target="_blank">Email</a>
+          <a href="https://www.facebook.com/adham.amr.539412?locale=ar_AR" target="_blank">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:40px 20px;text-align:center;color:#cbd5e1;background:linear-gradient(180deg,#0b0f1a,#0b1220)">
+    <small>© <span id="year"></span> Adham — All rights reserved.</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
